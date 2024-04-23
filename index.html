@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mullty | Form Page Demo</title>
+</head>
+<body>
+<div id="allContainer">
+
+    <div id="stepsContainer">
+
+        <div class="steps-flex">
+            <div class="step-circles" id="circleStep1">1</div>
+            <div class="step-txt-wrapper">
+                <div class="step-light-txt">STEP 1</div>
+                <div class="step-bold-txt">YOUR INFO</div>
+            </div>
+        </div>
+
+        <div class="steps-flex">
+            <div class="step-circles" id="circleStep2">2</div>
+            <div class="step-txt-wrapper">
+                <div class="step-light-txt">STEP 2</div>
+                <div class="step-bold-txt">SELECT PLAN</div>
+            </div>
+        </div>
+
+        <div class="steps-flex">
+            <div class="step-circles" id="circleStep3">3</div>
+            <div class="step-txt-wrapper">
+                <div class="step-light-txt">STEP 3</div>
+                <div class="step-bold-txt">ADD-ONS</div>
+            </div>
+        </div>
+
+        <div class="steps-flex">
+            <div class="step-circles" id="circleStep4">4</div>
+            <div class="step-txt-wrapper">
+                <div class="step-light-txt">STEP 4</div>
+                <div class="step-bold-txt">SUMMARY</div>
+            </div>
+        </div>
+
+    </div> <!--steps container-->
+
+    <div id="userInputContainer">
+            <div id="titleDescWrapper">
+        <div id="infoTitle">Personal info</div>
+        <div id="infoDescription">Please provide your name, email 
+        address, and phone number.</div>
+        </div>
+
+        <div id="containerStep1">
+
+            <div class="label-flex">
+            <label for="nameInput">Name</label>
+            <div class="error-txt" id="nameError">This field is required</div>
+            </div>
+            <input type="text" id="nameInput" placeholder="e.g. Stephen King">
+
+            <div class="label-flex">
+            <label for="emailInput">Email Address</label>
+            <div class="error-txt" id="emailError">This field is required</div>
+            </div>
+            <input type="text" id="emailInput" placeholder="e.g. stephenking@lorem.com">
+
+            <div class="label-flex">
+                <label for="phoneInput">Phone Number</label>
+                <div class="error-txt" id="phoneError">This field is required</div>
+                </div>
+            <input type="text" id="phoneInput" placeholder="e.g. +1 234 567 890">
+        </div> <!--step 1-->
+
+        <div id="containerStep2">
+
+        <div id="planWrapper">
+            <div class="plan-box" id="arcadeBox">
+                <img src="icon-arcade.svg" class="plan-icons" />
+                <div class="plan-title">Arcade</div>
+                <div class="plan-money" id="arcadeMoney">$90/mo</div>
+                <div class="plan-free">2 months free</div>
+            </div>    
+
+            <div class="plan-box" id="advancedBox">
+                <img src="icon-advanced.svg" class="plan-icons" />
+                <div class="plan-title">Advanced</div>
+                <div class="plan-money" id="advancedMoney">$120/mo</div>
+                <div class="plan-free">2 months free</div>
+            </div>      
+
+            <div class="plan-box" id="proBox">
+                <img src="icon-pro.svg" class="plan-icons" />
+                <div class="plan-title">Pro</div>
+                <div class="plan-money" id="proMoney">$150/mo</div>
+                <div class="plan-free">2 months free</div>
+            </div> 
+        </div>
+
+        <div id="monthYearWrapper">
+            <div class="month-year" id="monthText">Monthly</div>
+                <div id="toggleContainer" onclick="togglePlan()">
+                    <div id="toggleCircle"></div>
+                </div>
+                <div class="month-year" id="yearText">Yearly</div>
+        </div>
+
+        </div>
+
+        <div id="containerStep3">
+            <div id="addOnWrapper">
+
+                <div class="add-containers" id="addWrp1">
+                        <div class="add-multi-flex">
+                    <div class="plain-addbox" id="plained1">
+                        <img src="icon-checkmark.svg" class="checked-addbox" id="checked1" /></div>
+
+                    <div class="add-txtbox">
+                        <div class="add-txt-bold">Online Service</div>
+                        <div class="add-txt-light">Access to multiplayer games</div>
+                    </div>
+                        </div> <!--multi-flex-->
+
+                    <div class="add-prices" id="addPrice1">+$1/mo</div>
+
+                </div> <!--add container 1-->
+
+                <div class="add-containers" id="addWrp2">
+                    <div class="add-multi-flex">
+                <div class="plain-addbox" id="plained2">
+                    <img src="icon-checkmark.svg" class="checked-addbox" id="checked2" /></div>
+
+                <div class="add-txtbox">
+                    <div class="add-txt-bold">Larger storage</div>
+                    <div class="add-txt-light">Extra 1TB of cloud save</div>
+                </div>
+                    </div>
+
+                <div class="add-prices" id="addPrice2">+$2/mo</div>
+
+            </div>
+
+            <div class="add-containers" id="addWrp3">
+                <div class="add-multi-flex">
+            <div class="plain-addbox" id="plained3">
+                <img src="icon-checkmark.svg" class="checked-addbox" id="checked3" /></div>
+
+            <div class="add-txtbox">
+                <div class="add-txt-bold">Customizable profile</div>
+                <div class="add-txt-light">Custom theme on your profile</div>
+            </div>
+                </div>
+
+            <div class="add-prices" id="addPrice3">+$2/mo</div>
+
+        </div>
+
+            </div> <!--add wrapper all-->
+        </div>
+
+        <div id="containerStep4">
+            <div id="sumWrapper">
+                <div class="sum-plan-flex">
+                <div class="sum-txt-container">
+                    <div class="add-txt-bold"><span id="sumPlanText">Arcade</span> <span id="bracketChanger">(Monthly)</span></div>
+                    <div id="sumChangerPlan" onclick="changeBill()">Change</div>
+                </div>
+
+                <div class="add-txt-bold" id="sumArcadePrice">$9/mo</div>
+                </div>
+            
+            <div id="boxShadowSum">
+                <div class="sum-flex" id="sumAddWrp1">
+                    <div class="sum-light-txt">Online service</div>
+                    <div class="sum-price-txt" id="sumAddPrice1">+$1/mo</div>
+                </div> 
+                <div class="sum-flex" id="sumAddWrp2">
+                    <div class="sum-light-txt">Larger storage</div>
+                    <div class="sum-price-txt" id="sumAddPrice2">+$2/mo</div>
+                </div> 
+                <div class="sum-flex" id="sumAddWrp3">
+                    <div class="sum-light-txt">Customizable profile</div>
+                    <div class="sum-price-txt" id="sumAddPrice3">+$2/mo</div>
+                </div> 
+            </div>
+
+            </div> <!--sum wrapper-->
+
+            <div id="totalContainer">
+                <div class="sum-light-txt">Total <span id="perMonth">(per month)</span></div>
+                <div id="sumTotalPrice">+$12/mo</div>
+            </div>
+        </div>
+
+        <div id="buttonContainer">
+            <div id="goBack">Go Back</div>
+            <button id="nextStepBtn" onclick="nextStep()">Next Step</button>
+            <button id="confirmBtn" onclick="goFinish()">Confirm</button>
+        </div>
+
+        <div id="finishContainer">
+            <img src="icon-thank-you.svg" class="thank-icon" />
+            <div id="thankTitle">Thank you!</div>
+            <div id="thankPara">Thanks for confirming your subscription! We hope you have<br> 
+            fun using our platform. If you ever need support, please feel<br> free to
+            email us at support@loregaming.com.</div>
+        </div>
+
+    </div>
+
+</div> <!--ALL CONTAINER-->
+
+    <script src="script.js"></script>
+</body>
+</html>

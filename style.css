@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: hsl(215, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 98vh;
+}
+#allContainer {
+    width: 1070px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0px 0px 10px 2px hsla(0, 0%, 0%, 0.3);
+    display: flex;
+    gap: 6.5rem;
+}
+#stepsContainer {
+    background: url(bg-sidebar-desktop.svg);
+    width: 274px;
+    height: 568px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    padding-top: 35px;
+}
+.steps-flex {
+    display: flex;
+    gap: 20px;
+    margin-left: 38px;
+}
+#circleStep1 {
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(243, 100%, 62%);
+    border: 1px solid hsl(206, 94%, 87%);
+}
+.step-circles {
+    transition: 0.3s ease;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.step-txt-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+.step-light-txt {
+    color: #ffffffa1;
+    letter-spacing: 0.75px;
+    font-size: 13.5px;
+}
+.step-bold-txt {
+    font-size: 15px;
+    letter-spacing: 0.75px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#userInputContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    width: 570px;
+}
+#infoTitle {
+    color: hsl(214, 94%, 18%);
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+#infoDescription {
+    color: hsl(231, 11%, 53%);
+    font-size: 16.5px;
+    letter-spacing: 0.8px;
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 18px;
+}
+.error-txt {
+    color: red;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+.label-flex {
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 1px solid hsl(231, 11%, 63%);
+    margin-bottom: 28px;
+}
+input:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+input::placeholder {
+    color: hsl(231, 11%, 63%);
+}
+
+#goBack {
+    user-select: none;
+    margin-bottom: 10px;
+    transition: background-color 0.4s ease;
+    color: hsl(231, 11%, 63%);
+    font-size: 18.5px;
+    cursor: pointer;
+    visibility: hidden;
+}
+#goBack:hover {
+    color: hsl(214, 94%, 18%);
+}
+#buttonContainer {
+    padding-bottom: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /*67*/
+}
+#nextStepBtn {
+    transition: 0.4s ease;
+    background-color: hsl(214, 94%, 18%);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 6px;
+    width: 120px;
+    cursor: pointer;
+}
+#nextStepBtn:hover {
+    background-color: hsl(214, 94%, 35%);
+}
+#nextStepBtn:active {
+    transform: scale(0.9);
+}
+#confirmBtn {
+    display: none;
+    transition: 0.4s ease;
+    background-color: hsl(243, 100%, 62%);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 6px;
+    width: 120px;
+    cursor: pointer;
+}
+#confirmBtn:hover {
+    background-color: hsl(244, 98%, 77%);
+}
+#confirmBtn:active {
+    transform: scale(0.9);
+}
+
+#containerStep1 {
+    display: flex;                 /*STEP 1*/
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 570px;
+}
+#containerStep2 {
+    display: none; /*block*/
+}
+#containerStep3 {
+    display: none;
+    flex-direction: column;
+    width: 570px;
+}
+#containerStep4 {
+    display: none;
+    flex-direction: column;
+    width: 570px;
+}
+#planWrapper {             /*//STEP 2/////////////*/
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+.plan-box {
+    cursor: pointer; /*hsl(230, 75%, 98%)*/
+    width: 180px;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#arcadeBox {
+    background-color: hsl(230, 75%, 98%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.plan-box:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.plan-icons {
+    width: 45px;
+    height: auto;
+    margin-bottom: 50px;
+}
+.plan-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: hsl(214, 94%, 18%);
+    margin-bottom: 6px;
+}
+.plan-money {
+    color: hsl(231, 11%, 53%);
+    font-size: 16px;
+}
+.plan-free {
+    color: hsl(214, 94%, 18%);
+    font-size: 16px;
+    margin-top: 6px;
+}
+#monthYearWrapper {
+    background-color: hsl(230, 75%, 98%);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 32px;
+}
+.month-year {
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 18px;
+    color: hsl(214, 94%, 18%);
+}
+#monthText {
+    color: hsl(231, 11%, 63%);
+}
+#toggleContainer {
+    background-color: hsl(214, 94%, 18%);
+    width: 42px;
+    height: 22px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+#toggleCircle {
+    transition: 0.3s ease;
+    margin: 0 3px;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+}
+
+#addOnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.add-containers {         /*STEP 3*/   
+    transition: 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    background-color: transparent;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 12px;
+    cursor: pointer;
+}
+.add-containers:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.add-multi-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.plain-addbox {
+    width: 20px;
+    height: 21px;
+    border-radius: 4px;
+    border: 1px solid hsl(231, 11%, 63%);
+    background-color: transparent; /* hsl(243, 100%, 62%) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checked-addbox {
+    background-color: transparent;
+    transition: 0.2s ease;
+    opacity: 0;
+}
+.add-txt-bold {
+    color: hsl(214, 94%, 18%);
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.add-txt-light  {
+    color: hsl(231, 11%, 63%);
+    font-size: 15px;
+}
+.add-prices {
+    color: hsl(243, 100%, 62%);
+    font-size: 17px;
+}
+
+#sumWrapper {
+    background-color: hsl(230, 75%, 98%);
+    padding: 24px 28px;
+    border-radius: 10px;
+}
+.sum-plan-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*padding-bottom: 20px;
+    box-shadow: 0px 1.2px 0px 0px hsl(231, 11%, 83%);*/
+}
+#boxShadowSum {
+    margin-top: 24px;
+    padding-top: 20px;
+    box-shadow: 0px -1.2px 0px 0px hsl(231, 11%, 83%);
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+}
+.sum-flex {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+#sumChangerPlan {
+    color: hsl(231, 11%, 63%);
+    text-decoration: underline;
+    font-size: 17px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#sumChangerPlan:hover {
+    color: hsl(243, 100%, 62%);
+}
+#sumArcadePrice {
+    font-weight: bold;
+    font-size: 19px;
+}
+.sum-light-txt {
+    color: hsl(231, 11%, 63%);
+    font-size: 18px;
+}
+.sum-price-txt {
+    color: hsl(214, 94%, 18%);
+    font-size: 18px;
+}
+#totalContainer {
+    padding: 26px 28px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sumTotalPrice {
+    font-size: 22px;
+    color: hsl(243, 100%, 62%);
+    font-weight: bold;
+}
+
+#finishContainer {
+    height: 94%;
+    width: 570px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#thankTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: hsl(214, 94%, 18%);
+    margin-top: 32px;
+}
+#thankPara {
+    margin-top: 21px;
+    font-size: 18.5px;
+    color: hsl(231, 11%, 63%);
+    line-height: 1.6;
+    text-align: center;
+}
